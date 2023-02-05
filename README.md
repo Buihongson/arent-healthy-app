@@ -1,46 +1,115 @@
-# Getting Started with Create React App
+# Healthy App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Healthy App built with React Typescript, Tailwind CSS.
 
-## Available Scripts
+### Top Page
 
-In the project directory, you can run:
+![Top Page Overview](public/assets/assets/images/top_page.png)
 
-### `npm start`
+### My Record Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![My Record Page Overview](public/assets/assets/images/my_record_page.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Column Page
 
-### `npm test`
+![Column Page Overview](public/assets/assets/images/column_page.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Stack
 
-### `npm run build`
+### FE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- react typescript
+- axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### CSS Framework
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Tailwind CSS
 
-### `npm run eject`
+### Tools
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- eslint
+- prettier
+- lint-staged
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# install node version
+Please install at least v15.2.0 version node
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# install npm version
+Please install at least v7.0.10 version node
+```
 
-## Learn More
+```bash
+# install app's depndencie
+$ yarn
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# install typescript
+$ yarn add global typescript
+```
+
+```bash
+# dev server with PORT 3000 at http://localhost:3000/
+$ yarn start
+
+# run `lint:js` to tell you what is wrong code.
+$ yarn lint:js
+```
+
+# Convention code
+
+## Component's file name should be in Pascal Case.
+
+Component names should be like ProductCard and not like productCard, product-card, etc. This way when we see a filename in Pascal Case, it is immediately clear that the file is a react component.
+
+## Component having own folders should have a component file with the same name.
+
+This way when we search for files, we don't get a list of <b>index.ts</b> but will receive the actual component files.
+
+## Create an index.ts file in that component folder which export the named component.
+
+```
+import Product from './Product';
+export default Product;
+```
+
+or
+
+```
+export { default } from './Product';
+```
+
+## Directory sturcture code
+
+### Group by folder
+
+````
+├── public/          #static files
+│   ├── assets/      #assets
+|   |    |── images  #images
+|   |    |── fonts   #fonts
+│   └── index.html   #html template
+│
+├── src/             #project root
+|   |── assets/      #assets file
+|   |── components/  #common components reuse
+|   |── features/    #features of app
+|   |── guards/      #guard permissions
+│   ├── hooks/       #hooks source
+|   |── layouts/     #common layouts
+|   |── routes/      #common routes
+│   ├── services/    #services source
+│   ├── shared/      #common constant and utils reuse
+|   |── types/       #define interface
+|   |── typing/      #declare global package
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+
+└── package.json```
+````
