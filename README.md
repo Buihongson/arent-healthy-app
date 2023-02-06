@@ -4,15 +4,15 @@ A simple Healthy App built with React Typescript, Tailwind CSS.
 
 ### Top Page
 
-![Top Page Overview](public/assets/assets/images/top_page.png)
+![Top Page Overview](public/assets/images/top_page.png)
 
 ### My Record Page
 
-![My Record Page Overview](public/assets/assets/images/my_record_page.png)
+![My Record Page Overview](public/assets/images/my_record_page.png)
 
 ### Column Page
 
-![Column Page Overview](public/assets/assets/images/column_page.png)
+![Column Page Overview](public/assets/images/column_page.png)
 
 ## Stack
 
